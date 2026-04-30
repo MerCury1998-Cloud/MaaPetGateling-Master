@@ -1,12 +1,446 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
-    "MyTask4": {
-        "recognition": "Custom",
-        "custom_recognition": "my_reco_222",
-        "action": "Custom",
-        "custom_action": "my_action_111"
-    },
-    "OcrTask": {}
+  "Guild_Enter": {
+    "recognition": "OCR",
+    "expected": "公会",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Guild_hall"
+    ]
+  },
+  "Guild_hall": {
+    "recognition": "OCR",
+    "expected": "公会大厅",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_id_copy"
+    ]
+  },
+  "Guild_id_copy": {
+    "recognition": "TemplateMatch",
+    "template": "复制公会ID.png",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_apply"
+    ]
+  },
+  "Guild_apply": {
+    "recognition": "OCR",
+    "template": "申请",
+    "action": "Click",
+    "roi": [
+      633,
+      94,
+      61,
+      35
+    ],
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty"
+    ]
+  },
+  "Guild_log": {
+    "recognition": "OCR",
+    "expected": "日志",
+    "action": "Click",
+    "roi": [
+      635,
+      189,
+      62,
+      35
+    ],
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty2"
+    ]
+  },
+  "Click_empty": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_log"
+    ]
+  },
+  "Click_empty2": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_man"
+    ]
+  },
+  "Click_man": {
+    "recognition": "OCR",
+    "expected": "会长",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "check_msg"
+    ]
+  },
+  "check_msg": {
+    "recognition": "OCR",
+    "expected": "查看信息",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "add_friend"
+    ]
+  },
+  "add_friend": {
+    "recognition": "OCR",
+    "expected": "添加好友",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty4"
+    ]
+  },
+  "Click_empty4": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_More"
+    ]
+  },
+  "Guild_More": {
+    "recognition": "OCR",
+    "expected": "更多",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_list"
+    ]
+  },
+  "Guild_list": {
+    "recognition": "OCR",
+    "expected": "公会列表",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty5"
+    ]
+  },
+  "Click_empty5": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_quit"
+    ]
+  },
+  "Guild_quit": {
+    "recognition": "OCR",
+    "expected": "退出公会",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Quit_cancel"
+    ]
+  },
+  "Quit_cancel": {
+    "recognition": "OCR",
+    "expected": "取消",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "guild_back"
+    ]
+  },
+  "guild_back": {
+    "recognition": "TemplateMatch",
+    "template": "返回.png",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_science"
+    ]
+  },
+  "Guild_science": {
+    "recognition": "OCR",
+    "expected": "公会科技",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_science_Attack"
+    ]
+  },
+  "Guild_science_Attack": {
+    "recognition": "OCR",
+    "expected": "攻击力",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_science_tips"
+    ]
+  },
+  "Guild_science_tips": {
+    "recognition": "TemplateMatch",
+    "template": "tips.png",
+    "roi": [
+      626,
+      247,
+      26,
+      33
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "coin_donate"
+    ]
+  },
+  "coin_donate": {
+    "recognition": "OCR",
+    "expected": "金币捐献",
+    "action": "Click",
+    "target": true,
+    "repeat": 20, // 最多点击10次
+    "repeat_delay": 300, // 每次间隔300ms
+    "next": [
+      "diamond_donate"
+    ]
+  },
+  "diamond_donate": {
+    "recognition": "OCR",
+    "expected": "钻石捐献",
+    "action": "Click",
+    "target": true,
+    "post_delay": 300,
+    "next": [
+      "guild_cancel1"
+    ]
+  },
+  "guild_cancel1": {
+    "recognition": "OCR",
+    "expected": "取消",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "diamond_donate1"
+    ]
+  },
+  "diamond_donate1": {
+    "recognition": "OCR",
+    "expected": "钻石捐献",
+    "action": "Click",
+    "target": true,
+    "post_delay": 300,
+    "next": [
+      "Guild_Enter1"
+    ]
+  },
+  "Guild_Enter1": {
+    "recognition": "OCR",
+    "expected": "确认",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "diamond_donate2"
+    ]
+  },
+  "diamond_donate2": {
+    "recognition": "OCR",
+    "expected": "钻石捐献",
+    "action": "Click",
+    "target": true,
+    "post_delay": 300,
+    "next": [
+      "guild_gouxuan"
+    ]
+  },
+  "guild_gouxuan": {
+    "recognition": "TemplateMatch",
+    "template": "勾选.png",
+    "roi": [
+      259,
+      641,
+      49,
+      32
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 300,
+    "next": [
+      "diamond_donate4"
+    ]
+  },
+  "diamond_donate4": {
+    "recognition": "OCR",
+    "expected": "钻石捐献",
+    "action": "Click",
+    "target": true,
+    "repeat": 5,
+    "post_delay": 300,
+    "next": [
+      "Click_empty6"
+    ]
+  },
+  "Click_empty6": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_science_rank"
+    ]
+  },
+  "Guild_science_rank": {
+    "recognition": "OCR",
+    "expected": "排行榜",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "guild_back1"
+    ]
+  },
+  "guild_back1": {
+    "recognition": "TemplateMatch",
+    "template": "返回.png",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "gongjian_attack"
+    ]
+  },
+  "gongjian_attack": {
+    "recognition": "TemplateMatch",
+    "template": "弓箭攻击力__20_656_142_26__0_606_212_126.png",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty7"
+    ]
+  },
+  "Click_empty7": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "wuli_attack"
+    ]
+  },
+  "wuli_attack": {
+    "recognition": "TemplateMatch",
+    "template": "物理攻击力__285_651_157_32__235_601_257_132.png",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty8"
+    ]
+  },
+  "Click_empty8": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "chaoneng_attack"
+    ]
+  },
+  "chaoneng_attack": {
+    "recognition": "OCR",
+    "expected": "超能系攻击力",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Click_empty9"
+    ]
+  },
+  "Click_empty9": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "swipe_down"
+    ]
+  },
+  "swipe_until_find": {
+    "recognition": "OCR",
+    "expected": "造成伤害", // 替换成你要找的文字
+    "action": "Click",
+    "next": [
+      "Click_empty10"
+    ]
+  },
+  "swipe_down": {
+    "recognition": "DirectHit",
+    "action": "Swipe",
+    "swipe": [
+      [
+        360,
+        1000
+      ],
+      [
+        360,
+        400
+      ],
+      800
+    ],
+    "post_delay": 500,
+    "next": [
+      "swipe_until_find", // 先检查是否找到目标
+      "swipe_down" // 没找到，继续下滑
+    ]
+  },
+  "Click_empty10": {
+    "recognition": "OCR",
+    "expected": "点击空白处关闭",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "guild_back2"
+    ]
+  },
+  "guild_back2": {
+    "recognition": "TemplateMatch",
+    "template": "返回.png",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_Enter"
+    ]
+  }
 }
