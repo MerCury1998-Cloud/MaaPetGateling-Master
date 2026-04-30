@@ -192,18 +192,35 @@
     ]
   },
   "Guild_science_Attack": {
+    "recognition": "TemplateMatch",
+    "template": "攻击力__325_314_75_28__275_264_175_128.png",
+    "action": "Click",
+    "roi": [
+      325,
+      314,
+      75,
+      28
+    ],
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_science_tips",
+      "Click_empty3"
+    ]
+  },
+  "Click_empty3": {
     "recognition": "OCR",
-    "expected": "攻击力",
+    "expected": "点击空白处关闭",
     "action": "Click",
     "target": true,
     "post_delay": 1000,
     "next": [
-      "Guild_science_tips"
+      "coin_donate"
     ]
   },
   "Guild_science_tips": {
     "recognition": "TemplateMatch",
-    "template": "tips.png",
+    "template": "scienes_tips.png",
     "roi": [
       626,
       247,
@@ -225,7 +242,8 @@
     "repeat": 20, // 最多点击10次
     "repeat_delay": 300, // 每次间隔300ms
     "next": [
-      "diamond_donate"
+      "diamond_donate",
+      "Click_empty6"
     ]
   },
   "diamond_donate": {
@@ -235,7 +253,8 @@
     "target": true,
     "post_delay": 300,
     "next": [
-      "guild_cancel1"
+      "guild_cancel1",
+      "Click_empty6"
     ]
   },
   "guild_cancel1": {
@@ -245,7 +264,8 @@
     "target": true,
     "post_delay": 1000,
     "next": [
-      "diamond_donate1"
+      "diamond_donate1",
+      "Click_empty6"
     ]
   },
   "diamond_donate1": {
@@ -255,7 +275,8 @@
     "target": true,
     "post_delay": 300,
     "next": [
-      "Guild_Enter1"
+      "Guild_Enter1",
+      "Click_empty6"
     ]
   },
   "Guild_Enter1": {
@@ -265,7 +286,8 @@
     "target": true,
     "post_delay": 1500,
     "next": [
-      "diamond_donate2"
+      "diamond_donate2",
+      "Click_empty6"
     ]
   },
   "diamond_donate2": {
@@ -337,7 +359,7 @@
   },
   "gongjian_attack": {
     "recognition": "TemplateMatch",
-    "template": "弓箭攻击力__20_656_142_26__0_606_212_126.png",
+    "template": "弓箭攻击力.png",
     "action": "Click",
     "target": true,
     "post_delay": 1000,
@@ -357,7 +379,7 @@
   },
   "wuli_attack": {
     "recognition": "TemplateMatch",
-    "template": "物理攻击力__285_651_157_32__235_601_257_132.png",
+    "template": "物理系攻击力.png",
     "action": "Click",
     "target": true,
     "post_delay": 1000,
@@ -400,7 +422,8 @@
     "expected": "造成伤害", // 替换成你要找的文字
     "action": "Click",
     "next": [
-      "Click_empty10"
+      "Click_empty10",
+      "guild_back2"
     ]
   },
   "swipe_down": {
@@ -417,7 +440,7 @@
       ],
       800
     ],
-    "post_delay": 500,
+    "post_delay": 1500,
     "next": [
       "swipe_until_find", // 先检查是否找到目标
       "swipe_down" // 没找到，继续下滑
@@ -439,8 +462,6 @@
     "action": "Click",
     "target": true,
     "post_delay": 1000,
-    "next": [
-      "Guild_Enter"
-    ]
+    "next": []
   }
 }
