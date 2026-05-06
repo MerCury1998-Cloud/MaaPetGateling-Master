@@ -11,20 +11,15 @@
     "welcome": "首次使用！欢迎使用 MAA!",
     // 填写项目地址和版本号可实现自动更新功能
     "github": "https://github.com/MerCury1998-Cloud/MaaPetGateling-Master",
-    "version": "1.0.0",
-    // Mirror酱为第三方分发服务，新项目默认关闭
-    // 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
-    // "mirrorchyan_rid": "MaaXXX",
-    // "mirrorchyan_multiplatform": true,
+    "version": "1.1.5",
     "controller": [
         {
             "name": "安卓端",
             "type": "Adb",
             "display_short_side": 720,
             "adb": {
-                "adb_path": "C:\\Users\\a1314\\Downloads\\adbsdk\\adb.exe", // 添加你的 ADB 路径
                 "config": [
-                    "127.0.0.1:5555"
+                    "emulator-5554"
                 ]
             }
         },
@@ -59,8 +54,12 @@
     // },
     "task": [
         {
-            "name": "公会系统",
+            "name": "公会大厅/科技",
             "entry": "Guild_Enter"
+        },
+        {
+            "name": "公会BOSS",
+            "entry": "Guild_Boss"
         }
     ]
 }

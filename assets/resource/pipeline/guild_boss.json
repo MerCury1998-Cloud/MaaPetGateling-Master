@@ -1,0 +1,10 @@
+{
+  "Guild_Boss": {
+    "recognition": "OCR",
+    "expected": "公会BOSS",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": []
+  }
+}

@@ -429,7 +429,7 @@
   "swipe_down": {
     "recognition": "DirectHit",
     "action": "Swipe",
-    "swipe": [
+    "Swipe": [
       [
         360,
         1000
