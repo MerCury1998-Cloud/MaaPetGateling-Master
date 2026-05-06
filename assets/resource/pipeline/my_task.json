@@ -31,7 +31,7 @@
   },
   "Guild_apply": {
     "recognition": "OCR",
-    "template": "申请",
+    "expected": "申请",
     "action": "Click",
     "roi": [
       633,
@@ -442,8 +442,8 @@
     ],
     "post_delay": 1500,
     "next": [
-      "swipe_until_find", // 先检查是否找到目标
-      "swipe_down" // 没找到，继续下滑
+      "swipe_until_find",
+      "swipe_down"
     ]
   },
   "Click_empty10": {
