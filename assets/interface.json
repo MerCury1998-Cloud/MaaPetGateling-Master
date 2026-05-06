@@ -53,8 +53,12 @@
     // },
     "task": [
         {
-            "name": "公会系统",
+            "name": "公会大厅",
             "entry": "Guild_Enter"
+        },
+        {
+            "name": "公会BOSS",
+            "entry": "Guild_Boss"
         }
     ]
 }

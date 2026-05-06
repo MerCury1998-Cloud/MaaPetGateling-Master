@@ -31,7 +31,7 @@
   },
   "Guild_apply": {
     "recognition": "OCR",
-    "template": "申请",
+    "expected": "申请",
     "action": "Click",
     "roi": [
       633,
@@ -98,7 +98,8 @@
     "target": true,
     "post_delay": 1000,
     "next": [
-      "add_friend"
+      "add_friend",
+      "Click_empty4"
     ]
   },
   "add_friend": {
@@ -239,8 +240,8 @@
     "expected": "金币捐献",
     "action": "Click",
     "target": true,
-    "repeat": 20, // 最多点击10次
-    "repeat_delay": 300, // 每次间隔300ms
+    "repeat": 20,
+    "repeat_delay": 300,
     "next": [
       "diamond_donate",
       "Click_empty6"
@@ -419,7 +420,7 @@
   },
   "swipe_until_find": {
     "recognition": "OCR",
-    "expected": "造成伤害", // 替换成你要找的文字
+    "expected": "造成伤害",
     "action": "Click",
     "next": [
       "Click_empty10",
@@ -442,8 +443,8 @@
     ],
     "post_delay": 1500,
     "next": [
-      "swipe_until_find", // 先检查是否找到目标
-      "swipe_down" // 没找到，继续下滑
+      "swipe_until_find",
+      "swipe_down"
     ]
   },
   "Click_empty10": {
