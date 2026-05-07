@@ -98,7 +98,8 @@
     "target": true,
     "post_delay": 1000,
     "next": [
-      "add_friend"
+      "add_friend",
+      "Click_empty4"
     ]
   },
   "add_friend": {
