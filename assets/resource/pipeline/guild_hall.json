@@ -1,4 +1,23 @@
 {
+  "InitLog_Start": {
+    "recognition": "DirectHit",
+    "action": "DoNothing",
+    "next": [
+      "InitLog_ClearAndWrite"
+    ]
+  },
+  "InitLog_ClearAndWrite": {
+    "recognition": "DirectHit",
+    "action": "Command",
+    "exec": "python",
+    "args": [
+      "{RESOURCE_DIR}/../frontend-design/init_log.py"
+    ],
+    "post_delay": 1500,
+    "next": [
+      "Guild_Enter"
+    ]
+  },
   "Guild_Enter": {
     "recognition": "OCR",
     "expected": "公会",
@@ -240,8 +259,8 @@
     "expected": "金币捐献",
     "action": "Click",
     "target": true,
-    "repeat": 20, // 最多点击10次
-    "repeat_delay": 300, // 每次间隔300ms
+    "repeat": 20,
+    "repeat_delay": 300,
     "next": [
       "diamond_donate",
       "Click_empty6"
@@ -420,7 +439,7 @@
   },
   "swipe_until_find": {
     "recognition": "OCR",
-    "expected": "造成伤害", // 替换成你要找的文字
+    "expected": "造成伤害",
     "action": "Click",
     "next": [
       "Click_empty10",
