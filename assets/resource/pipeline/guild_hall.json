@@ -1,4 +1,4 @@
-{
+﻿{
   "InitLog_Start": {
     "recognition": "DirectHit",
     "action": "DoNothing",
@@ -24,6 +24,125 @@
     "action": "Click",
     "target": true,
     "post_delay": 1500,
+    "next": [
+      "Guild_hall",
+      "Guild_create"
+    ]
+  },
+  "Guild_create": {
+    "recognition": "OCR",
+    "expected": "创建公会",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_name"
+    ]
+  },
+  "Guild_name": {
+    "recognition": "DirectHit",
+    "action": "Click",
+    "roi": [
+      103,
+      515,
+      100,
+      36
+    ],
+    "target": true,
+    "post_delay": 2000,
+    "next": [
+      "Guild_id"
+    ]
+  },
+  "Guild_id": {
+    "recognition": "DirectHit",
+    "action": "InputText",
+    "input_text": "123456",
+    "post_delay": 2000,
+    "next": [
+      "Guild_create_confirm"
+    ]
+  },
+  "Guild_create_confirm": {
+    "recognition": "OCR",
+    "expected": "确定",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_change_icon"
+    ]
+  },
+  "Guild_change_icon": {
+    "recognition": "TemplateMatch",
+    "template": "更换图标.png",
+    "roi": [
+      412,
+      402,
+      26,
+      31
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_Icon"
+    ]
+  },
+  "Guild_Icon": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": "公会图标.png",
+    "roi": [
+      423,
+      567,
+      80,
+      79
+    ],
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_Icon2"
+    ]
+  },
+  "Guild_Icon2": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": "公会图标2.png",
+    "roi": [
+      416,
+      838,
+      95,
+      86
+    ],
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_application"
+    ]
+  },
+  "Guild_application": {
+    "recognition": "OCR",
+    "expected": "使用",
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Guild_create_confirm2"
+    ]
+  },
+  "Guild_create_confirm2": {
+    "recognition": "OCR",
+    "roi": [
+      295,
+      939,
+      136,
+      37
+    ],
+    "expected": "创建公会",
+    "action": "Click",
+    "target": true,
+    "post_delay": 2000,
     "next": [
       "Guild_hall"
     ]

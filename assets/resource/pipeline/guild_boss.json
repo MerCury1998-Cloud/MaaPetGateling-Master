@@ -5,6 +5,376 @@
     "action": "Click",
     "target": true,
     "post_delay": 1500,
-    "next": []
+    "next": [
+      "guild_boss_tips"
+    ]
+  },
+  "guild_boss_tips": {
+    "recognition": "TemplateMatch",
+    "template": "公会BOSStips.png",
+    "action": "Click",
+    "repeat": 2,
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "guild_BUFF"
+    ]
+  },
+  "Click_top": {
+    "recognition": "DirectHit",
+    "action": "Click",
+    "roi": [
+      298,
+      5,
+      130,
+      40
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_fight"
+    ]
+  },
+  "guild_BUFF": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "公会强化.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_tips"
+    ]
+  },
+  "Boss_tips": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "公会强化tips.png"
+    ],
+    "roi": [
+      489,
+      688,
+      22,
+      24
+    ],
+    "target": true,
+    "post_delay": 2500,
+    "next": [
+      "Click_top"
+    ]
+  },
+  "Boss_fight": {
+    "recognition": "OCR",
+    "roi": [
+      472,
+      1003,
+      87,
+      52
+    ],
+    "expected": [
+      "挑战"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_config": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "22确定.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_man": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "战斗_弓箭_未选中.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_firedrgon": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "战斗_火龙_未选中.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_tiger": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "战斗_轰雷虎_未选中.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_fish": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "战斗_霜灵鱼_未选中.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_shark": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "战斗_冰鲨_未选中.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "Fright_brid": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "战斗_小鸟_未选中.png"
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Fright_config",
+      "Fright_shark",
+      "Fright_man",
+      "Fright_tiger",
+      "Fright_fish",
+      "Fright_firedrgon",
+      "Fright_brid",
+      "fright_back"
+    ]
+  },
+  "fright_back": {
+    "recognition": "OCR",
+    "expected": [
+      "返回"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_saodang"
+    ]
+  },
+  "Boss_saodang": {
+    "recognition": "OCR",
+    "expected": [
+      "扫荡"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_cancel"
+    ]
+  },
+  "Boss_cancel": {
+    "recognition": "OCR",
+    "expected": [
+      "取消"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_saodang1"
+    ],
+  },
+  "Boss_saodang1": {
+    "recognition": "OCR",
+    "expected": [
+      "扫荡"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_saodang2"
+    ],
+  },
+  "Boss_fanhui": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "返回.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_packget"
+    ],
+  },
+  "Boss_saodang2": {
+    "recognition": "OCR",
+    "expected": [
+      "扫荡"
+    ],
+    "action": "Click",
+    "roi": [
+      455,
+      729,
+      78,
+      43
+    ],
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Click_top1"
+    ],
+  },
+  "Click_top1": {
+    "recognition": "DirectHit",
+    "roi": [
+      298,
+      5,
+      130,
+      40
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_rank"
+    ],
+  },
+  "Boss_rank": {
+    "recognition": "OCR",
+    "expected": [
+      "排行榜"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Boss_fanhui"
+    ],
+  },
+  "Boss_packget": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "BOSS宝箱.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "reward_get"
+    ],
+  },
+  "reward_get": {
+    "recognition": "OCR",
+    "expected": [
+      "全部领取"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Click_top2"
+    ],
+  },
+  "Click_top2": {
+    "recognition": "DirectHit",
+    "roi": [
+      298,
+      5,
+      130,
+      40
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "BOSS_fanhui1"
+    ],
+  },
+  "BOSS_fanhui1": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "返回.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [],
   }
 }
