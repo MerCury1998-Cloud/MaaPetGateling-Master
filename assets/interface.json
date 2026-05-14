@@ -1,8 +1,8 @@
 {
   "interface_version": 2,
   "name": "MaaPet-Gatling-Master",
-  "description": "这是一个使用 MaaFramework 创建的PetGatling自动游玩项目。",
-  "contact": "MerCury1998-Cloud",
+  "description": "这是一个使用 MaaFramework 创建的新项目。",
+  "contact": "QQ群: 123456789",
   "license": "MIT",
   "welcome": "首次使用！欢迎使用 MAA!",
   "github": "https://github.com/MerCury1998-Cloud/MaaPetGateling-Master",
@@ -34,20 +34,20 @@
     {
       "name": "内网中文版",
       "path": [
-        "./base/"
+        "./resource"
       ]
     },
     {
       "name": "外网越南文版",
       "path": [
-        "./Vietnames/"
+        "./resource_vin"
       ]
     }
   ],
   "task": [
     {
       "name": "公会大厅/科技",
-      "description": "如果启动任务没反应，模拟器改成16：9",
+      "label": "如果启动任务没反应，模拟器改成16：9",
       "entry": "InitLog_Start"
     },
     {
@@ -55,7 +55,7 @@
       "entry": "Guild_Boss"
     },
     {
-      "name": "越南游戏自动游玩",
+      "name": "越南战斗",
       "entry": "Fight_Init"
     },
     {

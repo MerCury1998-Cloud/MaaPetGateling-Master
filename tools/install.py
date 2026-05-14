@@ -104,8 +104,13 @@ def install_resource():
     configure_ocr_model()
 
     shutil.copytree(
-        working_dir / "assets",
+        working_dir / "assets" / "resource",
         install_path / "resource",
+        dirs_exist_ok=True,
+    )
+    shutil.copytree(
+        working_dir / "assets" / "resource_vin",
+        install_path / "resource_vin",
         dirs_exist_ok=True,
     )
     shutil.copy2(
