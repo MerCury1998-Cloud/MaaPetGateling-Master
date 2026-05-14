@@ -34,19 +34,20 @@
     {
       "name": "内网中文版",
       "path": [
-        "./base"
+        "./base/"
       ]
     },
     {
       "name": "外网越南文版",
       "path": [
-        "./Vietnames"
+        "./Vietnames/"
       ]
     }
   ],
   "task": [
     {
-      "name": "公会大厅/科技,如果启动任务没反应，模拟器改成16：9",
+      "name": "公会大厅/科技",
+      "description": "如果启动任务没反应，模拟器改成16：9",
       "entry": "InitLog_Start"
     },
     {
