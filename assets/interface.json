@@ -34,13 +34,13 @@
     {
       "name": "内网中文版",
       "path": [
-        "./resource"
+        "./base"
       ]
     },
     {
       "name": "外网越南文版",
       "path": [
-        "./resource_vin"
+        "./Vietnames"
       ]
     }
   ],
