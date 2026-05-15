@@ -1,0 +1,187 @@
+{
+  "Fight_Init": {
+    "recognition": "DirectHit",
+    "action": "Command",
+    "exec": "python",
+    "args": [
+      "{RESOURCE_DIR}/../frontend-design/init_log.py"
+    ],
+    "post_delay": 1500,
+    "next": [
+      "Game_Start"
+    ]
+  },
+  "Game_Start": {
+    "recognition": "TemplateMatch",
+    "template": "game_start.png",
+    "action": "Click",
+    "roi": [
+      281,
+      1263,
+      150,
+      49
+    ],
+    "target": true,
+    "repeat": 3,
+    "post_delay": 500,
+    "next": [
+      "Wait_Buff1"
+    ]
+  },
+  "Wait_Buff1": {
+    "recognition": "DirectHit",
+    "action": "DoNothing",
+    "post_delay": 40000,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Wait_Buff": {
+    "recognition": "DirectHit",
+    "action": "DoNothing",
+    "post_delay": 15000,
+    "next": [
+      "Fight_Failed",
+      "Check_Buff_Appear"
+    ]
+  },
+  "Check_Buff_Appear": {
+    "recognition": "OCR",
+    "expected": [
+      "Chon Buff"
+    ],
+    "action": "DoNothing",
+    "post_delay": 15000,
+    "next": [
+      "Buff_arrow",
+      "Buff_shark",
+      "Buff_sword",
+      "Buff_bird",
+      "Buff_dragon",
+      "Buff_ape",
+      "Buff_tiger",
+      "Buff_fish",
+      "Buff_tyrant"
+    ]
+  },
+  "Buff_arrow": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_弓箭_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_shark": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_冰鲨_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_sword": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_剑皇_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_bird": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_小鸟_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_dragon": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_火龙_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_ape": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_猩猩_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_tiger": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_轰雷虎_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_fish": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_霜灵鱼_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Buff_tyrant": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_暴龙_未选中.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1500,
+    "next": [
+      "Wait_Buff"
+    ]
+  },
+  "Fight_Failed": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "战斗_失败.png"
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Game_Start"
+    ]
+  }
+}

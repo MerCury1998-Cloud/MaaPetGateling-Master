@@ -1,0 +1,67 @@
+{
+  "interface_version": 2,
+  "name": "MaaPet-Gatling-Master",
+  "description": "这是一个使用 MaaFramework 创建的新项目。",
+  "contact": "QQ群: 123456789",
+  "license": "MIT",
+  "welcome": "首次使用！欢迎使用 MAA!",
+  "github": "https://github.com/MerCury1998-Cloud/MaaPetGateling-Master",
+  "version": "v1.1.7",
+  "controller": [
+    {
+      "name": "安卓端",
+      "type": "Adb",
+      "display_short_side": 720,
+      "adb": {
+        "config": [
+          "emulator-5554"
+        ]
+      }
+    },
+    {
+      "name": "桌面端",
+      "type": "Win32",
+      "win32": {
+        "class_regex": ".*",
+        "window_regex": "Visual Studio",
+        "screencap": "PrintWindow",
+        "mouse": "PostMessageWithCursorPos",
+        "keyboard": "PostMessageWithCursorPos"
+      }
+    }
+  ],
+  "resource": [
+    {
+      "name": "内网中文版",
+      "path": [
+        "./resource"
+      ]
+    },
+    {
+      "name": "外网越南文版",
+      "path": [
+        "./resource",
+        "./resource_vin"
+      ]
+    }
+  ],
+  "task": [
+    {
+      "name": "公会大厅/科技",
+      "description": "如果启动任务没反应，模拟器改成16：9",
+      "entry": "InitLog_Start"
+    },
+    {
+      "name": "公会BOSS",
+      "entry": "Guild_Boss"
+    },
+    {
+      "name": "越南战斗",
+      "entry": "Fight_Init"
+    },
+    {
+      "name": "生成报告",
+      "entry": "GenerateReport_Start"
+    }
+  ]
+}

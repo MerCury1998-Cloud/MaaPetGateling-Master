@@ -1,0 +1,26 @@
+{
+    "GenerateReport_Start": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": [
+            "GenerateReport_RunTask"
+        ]
+    },
+    "GenerateReport_RunTask": {
+        "recognition": "DirectHit",
+        "action": "Command",
+        "exec": "python",
+        "args": [
+            "{RESOURCE_DIR}/../frontend-design/generate_report.py"
+        ],
+        "post_delay": 100,
+        "next": [
+            "GenerateReport_End"
+        ]
+    },
+    "GenerateReport_End": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": []
+    }
+}

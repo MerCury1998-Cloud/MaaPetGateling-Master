@@ -1,0 +1,33 @@
+{
+  "version": "1.1.5",
+  "date": "2026-05-06",
+  "title": "公会系统自动化功能上线",
+  "content": "公会大厅、科技、BOSS挑战等自动化功能全面上线",
+  "highlights": [
+    {
+      "type": "feature",
+      "title": "公会大厅自动化",
+      "description": "自动化进入公会大厅、申请公会列表、审批公会成员"
+    },
+    {
+      "type": "feature",
+      "title": "公会科技自动化",
+      "description": "自动化研究科技树、升级科技等级、支持多种资源捐献"
+    },
+    {
+      "type": "feature",
+      "title": "公会BOSS挑战",
+      "description": "自动化攻击公会BOSS，支持弓剑/物理/超能等多种攻击类型"
+    },
+    {
+      "type": "optimize",
+      "title": "识别效率优化",
+      "description": "优化截图识别效率，新增多个场景识别图片素材"
+    }
+  ],
+  "framework": "MaaFramework",
+  "thanks": [
+    "MaaFramework Team",
+    "MAA Community"
+  ]
+}
