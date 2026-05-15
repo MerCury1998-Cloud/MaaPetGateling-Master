@@ -1,16 +1,4 @@
 {
-  "Fight_Init": {
-    "recognition": "DirectHit",
-    "action": "Command",
-    "exec": "python",
-    "args": [
-      "{RESOURCE_DIR}/../frontend-design/init_log.py"
-    ],
-    "post_delay": 1500,
-    "next": [
-      "Game_Start"
-    ]
-  },
   "Game_Start": {
     "recognition": "TemplateMatch",
     "template": "game_start.png",
