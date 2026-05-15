@@ -56,8 +56,16 @@
       "entry": "Guild_Boss"
     },
     {
+      "name": "领取每日奖励",
+      "entry": "game_init"
+    },
+    {
+      "name": "公会日常",
+      "entry": "guild_daily"
+    },
+    {
       "name": "越南战斗",
-      "entry": "Fight_Init"
+      "entry": "Game_Start"
     },
     {
       "name": "生成报告",

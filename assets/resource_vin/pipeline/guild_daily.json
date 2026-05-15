@@ -1,0 +1,383 @@
+{
+    "guild_daily": {
+        "recognition": "TemplateMatch",
+        "template": "公会.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "target": true,
+        "next": [
+            "guild_daily_reward",
+            "guild_hall"
+        ]
+    },
+    "guild_daily_reward": {
+        "recognition": "TemplateMatch",
+        "template": "快速加入公会.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "Click_top3"
+        ]
+    },
+    "guild_hall": {
+        "recognition": "TemplateMatch",
+        "template": "公会科技.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "guild_science",
+            "guild_science1",
+            "guild_science2",
+            "guild_science3",
+            "guild_science4"
+        ]
+    },
+    "guild_science": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "guild_science.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "coin_donate1"
+        ]
+    },
+    "guild_science1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "guild_science1.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "coin_donate1"
+        ]
+    },
+    "guild_science2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "guild_science2.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "coin_donate1"
+        ]
+    },
+    "guild_science3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "guild_science3.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "coin_donate1"
+        ]
+    },
+    "guild_science4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "guild_science4.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "coin_donate1"
+        ]
+    },
+    "coin_donate1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "金币捐献.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "repeat": 21,
+        "target": true,
+        "next": [
+            "guild_back3"
+        ]
+    },
+    "guild_back3": {
+        "recognition": "TemplateMatch",
+        "template": "返回1.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "repeat": 3,
+        "target": true,
+        "next": [
+            "guild_boss"
+        ]
+    },
+    "guild_boss": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "公会BOSS.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "guild_encourage"
+        ]
+    },
+    "guild_encourage": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "鼓舞.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "guild_fight"
+        ]
+    },
+    "guild_fight": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "公会BOSS战斗.png"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "next": [
+            "Fright_config1",
+            "Fright_shark",
+            "Fright_man",
+            "Fright_tiger",
+            "Fright_fish",
+            "Fright_firedrgon",
+            "Fright_brid",
+            "fright_back"
+        ]
+    },
+    "Fright_config1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "确定.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "Fright_man1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "战斗_弓箭_未选中.png"
+        ],
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "Fright_firedrgon1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "战斗_火龙_未选中.png"
+        ],
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "Fright_tiger1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "战斗_轰雷虎_未选中.png"
+        ],
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "Fright_fish1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "战斗_霜灵鱼_未选中.png"
+        ],
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "Fright_shark1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "战斗_冰鲨_未选中.png"
+        ],
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "Fright_brid1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "战斗_小鸟_未选中.png"
+        ],
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Fright_config1",
+            "Fright_shark1",
+            "Fright_man1",
+            "Fright_tiger1",
+            "Fright_fish1",
+            "Fright_firedrgon1",
+            "Fright_brid1",
+            "fright_back1"
+        ]
+    },
+    "fright_back1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Boss_saodang4"
+        ]
+    },
+    "Boss_saodang4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "扫荡1.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "Boss_saodang5"
+        ]
+    },
+    "Boss_saodang5": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "扫荡2.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "boss_baoxiang"
+        ]
+    },
+    "boss_baoxiang": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "boss宝箱.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "baoxiang_claim"
+        ]
+    },
+    "baoxiang_claim": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "宝箱领取.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "click_top"
+        ]
+    },
+    "click_top": {
+        "recognition": "DirectHit",
+        "roi": [
+            441,
+            31,
+            131,
+            44
+        ],
+        "repeat": 3,
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": [
+            "guild_back4"
+        ]
+    },
+    "guild_back4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "返回1.png"
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 1500,
+        "next": []
+    }
+}

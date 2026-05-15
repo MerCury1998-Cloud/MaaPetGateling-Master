@@ -1,0 +1,91 @@
+{
+    "game_init": {
+        "recognition": "DirectHit",
+        "action": "Command",
+        "exec": "python",
+        "args": [
+            "{RESOURCE_DIR}/../frontend-design/init_log.py"
+        ],
+        "post_delay": 1500,
+        "next": [
+            "game_init1"
+        ]
+    },
+    "game_init1": {
+        "recognition": "DirectHit",
+        "roi": [
+            441,
+            31,
+            131,
+            44
+        ],
+        "action": "Click",
+        "target": true,
+        "repeat": 3,
+        "post_delay": 500,
+        "next": [
+            "guaji_reward"
+        ]
+    },
+    "guaji_reward": {
+        "recognition": "DirectHit",
+        "roi": [
+            37,
+            881,
+            83,
+            46
+        ],
+        "target": true,
+        "repeat": 3,
+        "post_delay": 500,
+        "next": [
+            "guaji_reward1"
+        ]
+    },
+    "guaji_reward1": {
+        "recognition": "TemplateMatch",
+        "template": "挂机奖励领取.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "saodang_reward"
+        ]
+    },
+    "saodang_reward": {
+        "recognition": "TemplateMatch",
+        "template": "扫荡奖励领取.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "repeat": 20,
+        "next": [
+            "saodang_reward1"
+        ]
+    },
+    "saodang_reward1": {
+        "recognition": "TemplateMatch",
+        "template": "扫荡奖励领取.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "target": true,
+        "repeat": 20,
+        "next": [
+            "Click_top3"
+        ]
+    },
+    "Click_top3": {
+        "baseTask": "game_init1",
+        "recognition": "DirectHit",
+        "roi": [
+            441,
+            31,
+            131,
+            44
+        ],
+        "action": "Click",
+        "target": true,
+        "repeat": 3,
+        "post_delay": 500,
+        "next": []
+    }
+}
