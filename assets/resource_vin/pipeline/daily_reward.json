@@ -14,10 +14,10 @@
     "game_init1": {
         "recognition": "DirectHit",
         "roi": [
-            441,
-            31,
-            131,
-            44
+            35,
+            871,
+            81,
+            58
         ],
         "action": "Click",
         "target": true,
@@ -46,8 +46,25 @@
         "recognition": "TemplateMatch",
         "template": "挂机奖励领取.png",
         "action": "Click",
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
+            "click_top1"
+        ]
+    },
+    "click_top1": {
+        "basetask": "game_init1",
+        "recognition": "DirectHit",
+        "roi": [
+            35,
+            871,
+            81,
+            58
+        ],
+        "action": "Click",
+        "target": true,
+        "post_delay": 500,
+        "next": [
+            "saodang_reward1",
             "saodang_reward"
         ]
     },
@@ -57,18 +74,17 @@
         "action": "Click",
         "post_delay": 2000,
         "target": true,
-        "repeat": 20,
+        "repeat": 1,
         "next": [
             "saodang_reward1"
         ]
     },
     "saodang_reward1": {
         "recognition": "TemplateMatch",
-        "template": "扫荡奖励领取.png",
-        "action": "Click",
+        "template": "广告扫荡.png",
+        "action": "DoNothing",
         "post_delay": 2000,
         "target": true,
-        "repeat": 20,
         "next": [
             "Click_top3"
         ]
