@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/a1314/.claude/**)",
+      "Bash(dir ~/.claude/)",
+      "Bash(claude model *)",
+      "Read(//d/TestFile/MaaAssistantArknights-dev-v2/**)",
+      "Bash(python -c \"import json; json.load\\(open\\('assets/resource_vin/pipeline/guild_daily_fault_tolerant.json'\\)\\)\")",
+      "Bash(python -c \"import json; json.load\\(open\\('assets/resource_vin/pipeline/guild_daily_fault_tolerant.json', encoding='utf-8'\\)\\)\")",
+      "Bash(python -c ' *)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh api *)",
+      "Bash(curl *)",
+      "Bash(python -c \"import sys,json; [print\\(i['name'], i['type']\\) for i in json.load\\(sys.stdin\\)]\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(i['full_name'], i['description']\\) for i in data.get\\('items',[]\\)]\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(i['full_name'], i['description']\\) for i in data.get\\('items',[]\\)[:5]]\")",
+      "Bash(pip install *)",
+      "Bash(python *)",
+      "Bash(pip show *)",
+      "Bash(pip list *)",
+      "Bash(pip uninstall *)",
+      "mcp__maa-mcp__find_adb_device_list",
+      "mcp__maa-mcp__connect_adb_device",
+      "mcp__maa-mcp__screencap",
+      "mcp__maa-mcp__run_pipeline",
+      "mcp__maa-mcp__check_and_download_ocr"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "maa-mcp"
+  ]
+}

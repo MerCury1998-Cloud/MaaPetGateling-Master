@@ -13,24 +13,44 @@
     "repeat": 3,
     "post_delay": 500,
     "next": [
-      "Wait_Buff1"
-    ]
-  },
-  "Wait_Buff1": {
-    "recognition": "DirectHit",
-    "action": "DoNothing",
-    "post_delay": 40000,
-    "next": [
       "Wait_Buff"
     ]
   },
   "Wait_Buff": {
     "recognition": "DirectHit",
     "action": "DoNothing",
-    "post_delay": 15000,
+    "post_delay": 1500,
     "next": [
       "Fight_Failed",
-      "Check_Buff_Appear"
+      "Check_Buff_Appear",
+      "boss_baoxiang3",
+      "Wait_Buff"
+    ]
+  },
+  "boss_baoxiang3": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "BOSS_宝箱掉落.png"
+    ],
+    "action": "DoNothing",
+    "target": true,
+    "next": [
+      "Click_top4"
+    ]
+  },
+  "Click_top4": {
+    "recognition": "DirectHit",
+    "roi": [
+      441,
+      31,
+      131,
+      44
+    ],
+    "action": "Click",
+    "target": true,
+    "post_delay": 1000,
+    "next": [
+      "Wait_Buff"
     ]
   },
   "Check_Buff_Appear": {
@@ -39,7 +59,7 @@
       "Chon Buff"
     ],
     "action": "DoNothing",
-    "post_delay": 15000,
+    "post_delay": 1000,
     "next": [
       "Buff_arrow",
       "Buff_shark",
@@ -168,6 +188,7 @@
     "action": "Click",
     "target": true,
     "post_delay": 1000,
+    "maxTimes": 10,
     "next": [
       "Game_Start"
     ]
